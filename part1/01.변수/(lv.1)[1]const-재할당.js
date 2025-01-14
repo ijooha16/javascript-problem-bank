@@ -7,7 +7,8 @@
  */
 
 function reassignConst() {
-  // TODO
+  const ex = 1;
+  ex = 2;
 }
 
 // export 를 수정하지 마세요.
