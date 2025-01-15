@@ -13,7 +13,11 @@
  * @returns {any[]} 잘려진 새 배열
  */
 function subArray(arr, start, end) {
-  // TODO
+  if (start === undefined && end === undefined) {
+    return [];
+  } else if (end === undefined) {
+    return arr.slice(start)
+  } else return arr.slice(start,end);
 }
 
 // export를 수정하지 마세요.

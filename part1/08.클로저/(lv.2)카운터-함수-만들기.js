@@ -12,7 +12,25 @@
  */
 function createCounter() {
   let count = 0;
-}
+
+  function increase() {
+    return count += 1;
+  }
+
+  function decrease() {
+    return count -= 1;
+  }
+
+  function currentValue() {
+    return count;
+  }
+
+  return {
+    increase,
+    decrease,
+    currentValue
+  };
+};
 
 // export를 수정하지 마세요.
 export { createCounter };

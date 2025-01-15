@@ -13,16 +13,23 @@
  * @returns {void}
  */
 
-let topKeywordsCache = [];
+// let topKeywordsCache = [];
 
-function updateTopKeywords(keywords) {
-  // TODO
-}
+// function updateTopKeywords(keywords) {
+//   topKeywordsCache = [];
+  
+//   for (let i=0; topKeywordsCache.length<=10; i++) {
+//     if (topKeywordsCache.includes(keywords[i])) {
+//       topKeywordsCache.push(keywords[i])
+//     }
+//   }
 
-function getTopKeywords() {
-  // TODO
-  return [];
-}
+//   return topKeywordsCache;
+// }
+
+// function getTopKeywords() {
+//   return topKeywordsCache;
+// }
 
 // export를 수정하지 마세요.
 export { topKeywordsCache, updateTopKeywords, getTopKeywords };
