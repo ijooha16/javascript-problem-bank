@@ -13,23 +13,24 @@
  * @returns {void}
  */
 
-// let topKeywordsCache = [];
+let topKeywordsCache = [];
 
-// function updateTopKeywords(keywords) {
-//   topKeywordsCache = [];
+function updateTopKeywords(keywords) {
+  let count = {};
   
-//   for (let i=0; topKeywordsCache.length<=10; i++) {
-//     if (topKeywordsCache.includes(keywords[i])) {
-//       topKeywordsCache.push(keywords[i])
-//     }
-//   }
+  keywords.forEach((key) => {
+    count[key] = (count[key] || 0) + 1;
+  });
+  
+  topKeywordsCache = Object.entries(count)
+    .sort((a,b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([key]) => key);
+}
 
-//   return topKeywordsCache;
-// }
-
-// function getTopKeywords() {
-//   return topKeywordsCache;
-// }
+function getTopKeywords() {
+  return topKeywordsCache;
+}
 
 // export를 수정하지 마세요.
 export { topKeywordsCache, updateTopKeywords, getTopKeywords };
