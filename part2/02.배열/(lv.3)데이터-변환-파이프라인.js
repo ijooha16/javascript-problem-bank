@@ -14,7 +14,10 @@
  * @returns {number[]} 변환된 배열
  */
 
-function transformData(arr, threshold) {}
+function transformData(arr, threshold) {
+    let num = arr.filter((n) => n % 2 === 0).map((n) => n ** 2)
+    return num.filter((n) => n <= threshold).sort((a,b) => b-a)
+}
 
 // export 를 수정하지 마세요.
 export { transformData };
